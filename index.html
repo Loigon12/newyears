@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>newyears | mundo oficial</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+
+    <div id="forest-bg"></div>
+    <canvas id="mistCanvas"></canvas>
+
+    <nav>
+        <div class="logo">newyears</div>
+        <div class="track-meta" style="color: var(--mist-gray)">replay</div>
+    </nav>
+
+    <header>
+        <h1>newyears</h1>
+        <p class="subtitle">Sumergete en mi mundo</p>
+    </header>
+
+    <section class="featured-release">
+        <div class="release-img">
+            <img src="img/antesdeirnos.png" alt="antes de irnos cover">
+        </div>
+        <div class="release-info">
+            <p class="track-meta" style="color: var(--mist-gray); text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px;">Último lanzamiento • EP</p>
+            <h2>"antes de irnos" <3</h2>
+            <p style="margin-bottom: 2rem; color: var(--mist-gray);">Un viaje melancólico a través de recuerdos fragmentados, la ciudad nocturna y el silencio de la naturaleza.</p>
+            <a href="https://open.spotify.com/intl-es/album/4pPJtUCepp3eyPlglkfFqp?si=Nhq9QQ19Qm6eEIZAaLEYnQ" class="btn-listen-hero">escuchar ahora</a>
+        </div>
+    </section>
+
+    <section class="music-world">
+        <h3 style="margin-bottom: 2rem; font-weight: 300; opacity: 0.6; letter-spacing: 1px;">discografía</h3>
+        
+        <div class="track" onclick="playTrack(0)" data-src="music/newyears - hi tú [sentimental edit] - newyears.mp3">
+            <span>01. hi: tú </span>
+            <span class="track-meta">3:11</span>
+        </div>
+        <div class="track" onclick="playTrack(1)" data-src="music/newyears - haces bien [sin copia de seguridad] - newyears.mp3">
+            <span>02. haces bien</span>
+            <span class="track-meta">3:34</span>
+        </div>
+        <div class="track" onclick="playTrack(2)" data-src="https://cdn.pixabay.com/download/audio/2022/03/09/audio_c8c90c59c6.mp3?filename=soft-rain-ambient-10186.mp3">
+            <span>03. volver a enam...</span>
+            <span class="track-meta">2:26</span>
+        </div>
+        <div class="track" onclick="playTrack(3)" data-src="https://cdn.pixabay.com/download/audio/2022/01/18/audio_d0a13733b1.mp3?filename=lofi-study-112191.mp3">
+            <span>04. linkEAdo</span>
+            <span class="track-meta">3:22</span>
+        </div>
+         <div class="track" onclick="playTrack(4)" data-src="https://cdn.pixabay.com/download/audio/2022/05/24/audio_2e01431683.mp3?filename=please-calm-my-mind-125566.mp3">
+            <span>05. Era Bonito</span>
+            <span class="track-meta">3:00</span>
+        </div>
+    </section>
+
+
+    <section class="featured-release">
+        <div class="release-img">
+            <img src="img/nadacomun.png" alt="antes de irnos cover">
+        </div>
+        <div class="release-info">
+            <p class="track-meta" style="color: var(--mist-gray); text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px;">Otro sencillo</p>
+            <h2 style="color: var(--mist-gray);">"nada / común"</h2>
+            <p style="margin-bottom: 2rem; color: var(--mist-gray);"></p>
+            <a href="https://open.spotify.com/intl-es/album/3BLtzBHYOq7QvIRVO1CINz?si=_Am1K0WNQR2K14QCEcx7WQ" class="btn-listen-hero">escuchar ahora</a>
+        </div>
+    </section>
+
+    <section class="socials">
+        <a href="https://open.spotify.com/intl-es/artist/1DCXmcJHgPQdlynqNBtlWb?si=1x0jd4v6Q9ymoJRdIfTfUw" target="_blank" class="social-link" aria-label="Spotify">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.6 0 12 0zm5.5 17.3c-.2.3-.6.4-.9.2-2.5-1.5-5.7-1.9-9.4-1-1 .3-.2.2-.6 1.1-.2-.3-1 .2-1.1.2zm1.2-2.7c-.3.4-.8.6-1.2.3-3-1.8-7.6-2.4-11.1-1.3-.5.1-1-.1-1.1-.6-.1-.5.1-1 .6-1.1 4.1-1.2 9.2-.5 12.6 1.5.4.3.5.8.2 1.2zm.1-2.8c-3.6-2.1-9.6-2.3-13.1-1.2-.6.2-1.2-.2-1.3-.7-.2-.6.2-1.2.7-1.3 4.1-1.2 10.7-1 14.8 1.4.5.3.7 1 .4 1.5-.3.6-1 .7-1.5.3z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/newyears_____/" target="_blank" class="social-link" aria-label="Instagram">
+             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.3 2.2.5.6.2 1 .6 1.4 1 .4.4.8.9 1 1.4.2.4.4 1.1.5 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 1.8-.5 2.2-.2.6-.6 1-1 1.4-.4.4-.9.8-1.4 1-.4.2-1.1.4-2.2.5-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.3-2.2-.5-.6-.2-1-.6-1.4-1-.4-.4-.8-.9-1-1.4-.2-.4-.4-1.1-.5-2.2-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.3-1.8.5-2.2.2-.6.6-1 1-1.4.4-.4.9-.8 1.4-1 .4-.2 1.1-.4 2.2-.5 1.3-.1 1.7-.1 4.9-.1zm0-2.2C8.7 0 8.3 0 7.1.1 5.8.1 4.9.3 4.1.6c-.8.3-1.5.8-2.1 1.4C1.4 2.6.9 3.4.6 4.1c-.3.8-.5 1.7-.6 2.9C0 8.3 0 8.7 0 12s0 3.7.1 4.9c.1 1.2.3 2.1.6 2.9.3.8.8 1.5 1.4 2.1.6.6 1.4 1.1 2.1 1.4.8.3 1.7.5 2.9.6 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c1.2-.1 2.1-.3 2.9-.6.8-.3 1.5-.8 2.1-1.4.6-.6 1.1-1.4 1.4-2.1.3-.8.5-1.7.6-2.9.1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.1-1.2-.3-2.1-.6-2.9-.3-.8-.8-1.5-1.4-2.1-.6-.6-1.4-1.1-2.1-1.4-.8-.3-1.7-.5-2.9-.6C15.7 0 15.3 0 12 0zm0 5.8c-3.4 0-6.2 2.8-6.2 6.2s2.8 6.2 6.2 6.2 6.2-2.8 6.2-6.2-2.8-6.2-6.2-6.2zm0 10.2c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4zm6.4-10.5c-.8 0-1.4.6-1.4 1.4s.6 1.4 1.4 1.4 1.4-.6 1.4-1.4-.6-1.4-1.4-1.4z"/></svg>
+        </a>
+        <a href="https://www.youtube.com/@newyearsloveu" target="_blank" class="social-link" aria-label="YouTube">
+            <svg viewBox="0 0 24 24"><path d="M23.5 6.2c-.3-1.1-1.1-1.9-2.2-2.2C19.4 3.5 12 3.5 12 3.5s-7.4 0-9.3.5c-1.1.3-1.9 1.1-2.2 2.2C0 8.1 0 12 0 12s0 3.9.5 5.8c.3 1.1 1.1 1.9 2.2 2.2 1.9.5 9.3.5 9.3.5s7.4 0 9.3-.5c1.1-.3 1.9-1.1 2.2-2.2.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zM9.5 15.5V8.5l6.5 3.5-6.5 3.5z"/></svg>
+        </a>
+    </section>
+
+    <footer>
+        <p>nada / común :)</p>
+        <p style="margin-top: 10px;">&copy; 2026 newyears world</p>
+    </footer>
+
+    <audio id="main-audio"></audio>
+
+    <div id="fixed-player">
+        <div class="player-controls">
+            <button id="play-pause-btn">
+                <svg id="play-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                <svg id="pause-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+            </button>
+            <div class="track-info-player">
+                <span id="current-track-title">Selecciona una canción</span>
+            </div>
+        </div>
+        <div class="progress-container" id="progress-container">
+            <div id="progress-bar"></div>
+        </div>
+    </div>
+
+    <script>
+        // --- Lógica del Reproductor de Audio ---
+        const audio = document.getElementById('main-audio');
+        const playPauseBtn = document.getElementById('play-pause-btn');
+        const playIcon = document.getElementById('play-icon');
+        const pauseIcon = document.getElementById('pause-icon');
+        const currentTrackTitle = document.getElementById('current-track-title');
+        const progressBar = document.getElementById('progress-bar');
+        const progressContainer = document.getElementById('progress-container');
+        const fixedPlayer = document.getElementById('fixed-player');
+        const tracks = document.querySelectorAll('.track');
+
+        let isPlaying = false;
+        let currentTrackIndex = -1;
+
+        // Función principal para cargar y reproducir una pista
+        function playTrack(index) {
+            if (index === currentTrackIndex && isPlaying) {
+                pauseTrack();
+                return;
+            }
+
+            const selectedTrack = tracks[index];
+            const src = selectedTrack.getAttribute('data-src');
+            const title = selectedTrack.querySelector('span:first-child').innerText;
+
+            audio.src = src;
+            audio.load();
+            
+            currentTrackIndex = index;
+            currentTrackTitle.innerText = title.split('.')[1].trim(); // Limpiar el número del título
+            
+            // Actualizar estado visual de la lista
+            tracks.forEach(t => t.classList.remove('playing'));
+            selectedTrack.classList.add('playing');
+            
+            // Mostrar el reproductor fijo si es la primera vez
+            fixedPlayer.classList.add('active');
+            
+            startPlayback();
+        }
+
+        function startPlayback() {
+            audio.play().then(() => {
+                isPlaying = true;
+                playIcon.style.display = 'none';
+                pauseIcon.style.display = 'block';
+            }).catch(error => console.error("Error al reproducir:", error));
+        }
+
+        function pauseTrack() {
+            audio.pause();
+            isPlaying = false;
+            playIcon.style.display = 'block';
+            pauseIcon.style.display = 'none';
+        }
+
+        // Event Listeners del Reproductor
+        playPauseBtn.addEventListener('click', () => {
+            if (currentTrackIndex === -1) {
+                playTrack(0); // Reproducir la primera si no hay nada seleccionado
+            } else if (isPlaying) {
+                pauseTrack();
+            } else {
+                startPlayback();
+            }
+        });
+
+        audio.addEventListener('timeupdate', () => {
+            const progressPercent = (audio.currentTime / audio.duration) * 100;
+            progressBar.style.width = `${progressPercent}%`;
+        });
+
+        audio.addEventListener('ended', () => {
+            // Reproducir siguiente canción automáticamente
+            let nextIndex = currentTrackIndex + 1;
+            if (nextIndex < tracks.length) {
+                playTrack(nextIndex);
+            } else {
+                pauseTrack(); // Fin de la lista
+            }
+        });
+
+        // Click en la barra de progreso para saltar
+        progressContainer.addEventListener('click', (e) => {
+            const width = progressContainer.clientWidth;
+            const clickX = e.offsetX;
+            const duration = audio.duration;
+            audio.currentTime = (clickX / width) * duration;
+        });
+
+
+        // --- Efectos Visuales (Partículas y Scroll) ---
+        const canvas = document.getElementById('mistCanvas');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+
+        function initCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 1.5 + 0.2;
+                this.speedX = Math.random() * 0.2 - 0.1;
+                this.speedY = Math.random() * 0.2 - 0.1;
+                this.opacity = Math.random() * 0.4;
+            }
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+                if (this.x > canvas.width) this.x = 0;
+                if (this.x < 0) this.x = canvas.width;
+                if (this.y > canvas.height) this.y = 0;
+                if (this.y < 0) this.y = canvas.height;
+            }
+            draw() {
+                ctx.fillStyle = `rgba(255, 255, 255, ${this.opacity})`;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+
+        function createParticles() {
+            for (let i = 0; i < 40; i++) particles.push(new Particle());
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach(p => { p.update(); p.draw(); });
+            requestAnimationFrame(animate);
+        }
+
+        window.addEventListener('resize', initCanvas);
+        initCanvas();
+        createParticles();
+        animate();
+
+        // Scroll Reveal
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = "1";
+                    entry.target.style.transform = "translateY(0)";
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.featured-release, .track, .socials').forEach(el => {
+            el.style.opacity = "0";
+            el.style.transform = "translateY(30px)";
+            el.style.transition = "all 0.8s cubic-bezier(0.22, 1, 0.36, 1)";
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
