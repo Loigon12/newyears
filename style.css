@@ -139,11 +139,7 @@ canvas {
     color: #fff;
 }
 
-.subtitulo-persuasivo {
-    max-width: 500px; margin: 0 auto 40px;
-    color: var(--mist-gray); font-size: 1.1rem;
-    font-weight: 300; line-height: 1.6;
-}
+
 
 .btn-video-link {
     display: inline-flex; align-items: center;
