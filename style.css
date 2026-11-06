@@ -547,7 +547,18 @@ footer {
 
     .hero { min-height: 105vh; }
     .hero-doodle { display: none; }
-    .hero-cta { padding: 11px 20px 13px; box-shadow: 4px 4px 0 #2e9b82; }
+     .hero-cta {
+        gap: 8px;
+        margin-top: 6px;
+        padding: 8px 14px 10px;
+        font-size: 0.95rem;
+        letter-spacing: 0;
+        border-width: 2px;
+        box-shadow: 3px 3px 0 #9b2e40;
+    }
+    .hero-cta svg { width: 14px; height: 14px; }
+    .hero-cta:hover { box-shadow: 5px 5px 0 #611925; }
+    .hero-cta:active { box-shadow: 1px 1px 0 #9b2e40; }
 
      .live-section { padding: 72px 20px 84px; }
      .live-tag { font-size: 0.65rem; letter-spacing: 2px; margin-bottom: 20px; }
@@ -579,4 +590,5 @@ footer {
 @media (prefers-reduced-motion: reduce) {
     .hero-logo, .hero-sticker { animation: none; }
     html { scroll-behavior: auto; }
+    .hero-cta { font-size: 0.85rem; padding: 7px 12px 9px; }
 }
