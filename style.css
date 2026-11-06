@@ -84,25 +84,54 @@ nav {
     animation: fadeIn 2.2s ease;
 }
 
-.hero-sticker {
-    display: inline-block;
-    margin-top: -4px;
-    padding: 6px 18px 8px;
+html { scroll-behavior: smooth; }
+
+.hero-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 10px;
+    padding: 13px 26px 15px;
     background: #f7f4ee;
-    color: #1c1c1c;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: clamp(1.3rem, 3vw, 1.9rem);
-    letter-spacing: 1px;
+    color: #111;
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: clamp(1.15rem, 2.6vw, 1.5rem);
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    border: 3px solid #111;
+    border-radius: 3px;
+    box-shadow: 6px 6px 0 #9b2e40;
     transform: rotate(-3deg);
-    box-shadow: 4px 4px 0 #2e9b82;
     animation: fadeIn 3s ease;
-     transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
-    cursor: pointer;
+    transition: transform 0.18s ease-out, box-shadow 0.18s ease-out, background 0.18s ease-out;
 }
-.hero-sticker:hover {
-    transform: rotate(-3deg) translate(-3px, -3px); 
-    
-    box-shadow: 7px 7px 0 #2e9b82; 
+
+.hero-cta svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    transition: transform 0.18s ease-out;
+}
+
+.hero-cta:hover {
+    background: #f3b7b0;
+    transform: translate(-3px, -3px) rotate(-3deg);
+    box-shadow: 9px 9px 0 #5c1722;
+}
+
+.hero-cta:hover svg {
+    transform: translateY(4px);
+}
+
+.hero-cta:active {
+    transform: translate(4px, 4px) rotate(-3deg);
+    box-shadow: 2px 2px 0 #9b2e40;
+}
+
+.hero-cta:focus-visible {
+    outline: 3px dashed #f7b733;
+    outline-offset: 5px;
 }
 
 .hero-doodle {
@@ -157,8 +186,9 @@ nav {
 
 .live-copy {
     font-size: 1.05rem;
-    color: #f7f5f5;
-    margin: 18px 0 52px;
+    color: #333;
+    margin: 18px 0 48px;
+    max-width: 480px;
 }
 
 .live-frame-wrap {
@@ -182,21 +212,27 @@ nav {
     object-fit: cover;
     display: block;
 }
-
 .live-doodle {
-    position: absolute;
-    right: -18px;
-    bottom: -34px;
-    width: clamp(48px, 7vw, 80px);
-    transform: rotate(10deg);
+    width: clamp(46px, 6vw, 70px);
+    flex-shrink: 0;
+    transform: rotate(-8deg);
     pointer-events: none;
+}
+
+/* Fila del botón + monito, separada del video */
+.live-cta {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 28px;
+    margin-top: 72px;
 }
 
 .btn-live {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 12px;
-    margin-top: 64px;
     padding: 20px 38px;
     background: var(--ink);
     color: var(--paper);
@@ -210,7 +246,6 @@ nav {
     box-shadow: 7px 7px 0 #d4506a;
     transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
 }
-
 .btn-live svg {
     width: 22px;
     height: 22px;
@@ -510,19 +545,38 @@ footer {
     #fixed-player { padding: 0 20px; height: 70px; }
     nav { padding: 1.5rem 2rem; }
 
-    .hero { min-height: 75vh; }
+    .hero { min-height: 105vh; }
     .hero-doodle { display: none; }
+    .hero-cta { padding: 11px 20px 13px; box-shadow: 4px 4px 0 #2e9b82; }
 
-      .live-section { padding: 80px 18px 90px; }
-    .live-frame { box-shadow: 8px 8px 0 var(--ink); border-width: 4px; }
+     .live-section { padding: 72px 20px 84px; }
+     .live-tag { font-size: 0.65rem; letter-spacing: 2px; margin-bottom: 20px; }
+      .live-frame { box-shadow: 7px 7px 0 var(--ink); border-width: 4px; }
+    .live-cta {
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+        margin-top: 52px;
+        width: 100%;
+    }
     .tape { width: 80px; height: 26px; }
     .doodle-squiggle, .doodle-star { display: none; }
     .doodle-man { width: 64px; bottom: 24px; right: 12px; opacity: 0.5; }
     .cta-arrow, .cta-note { display: none; }
-    .live-doodle { right: -6px; bottom: -26px; }
-    .btn-live { margin-top: 52px; padding: 18px 26px; font-size: 0.8rem; }
+   .live-doodle { width: 48px; order: -1; }
+    .btn-live {
+        width: 100%;
+        max-width: 340px;
+        padding: 18px 20px;
+        font-size: 0.8rem;
+        box-shadow: 5px 5px 0 #d4506a;
+    }
 }
-
+@media (max-width: 380px) {
+    .live-title { font-size: 2.2rem; }
+    .btn-live { letter-spacing: 0.5px; }
+}
 @media (prefers-reduced-motion: reduce) {
     .hero-logo, .hero-sticker { animation: none; }
+    html { scroll-behavior: auto; }
 }

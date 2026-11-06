@@ -51,7 +51,12 @@
             </g>
         </svg>
 
-        <p class="hero-sticker">Sumérgete en mi mundo</p>
+        <a href="#live" class="hero-cta">
+    <span>Sumérgete en mi mundo</span>
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 3 C11 9, 13 14, 12 20 M5 14 L12 21 L19 13" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+</a>
 
         <!-- Monito dibujado a mano -->
         <svg class="hero-doodle" viewBox="0 0 140 240" aria-hidden="true">
@@ -68,21 +73,22 @@
         </svg>
     </header>
 
-   <!-- ================= LIVE SESSION ================= -->
-<section class="live-section">
+
+<!-- ================= LIVE SESSION ================= -->
+<section class="live-section" id="live">
     <div class="live-inner reveal-section">
         <p class="live-tag">live session &middot; ya en youtube</p>
         <h2 class="live-title">EP: antes de irnos</h2>
         <p class="live-copy">Las canciones del EP, en vivo y sin filtros. Dale play.</p>
 
-        <div class="live-frame-wrap">
-            <div class="live-frame">
-                <video id="main-video" autoplay loop muted playsinline controls>
-                    <source src="music/newyears - _antes de irnos_ (Live Session).mp4" type="video/mp4">
-                    Tu navegador no soporta el formato de video.
-                </video>
-            </div>
+        <div class="live-frame">
+            <video id="main-video" autoplay loop muted playsinline controls>
+                <source src="music/newyears - _antes de irnos_ (Live Session).mp4" type="video/mp4">
+                Tu navegador no soporta el formato de video.
+            </video>
+        </div>
 
+        <div class="live-cta">
             <svg class="live-doodle" viewBox="0 0 140 240" aria-hidden="true">
                 <g fill="none" stroke="#111" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
                     <rect x="18" y="26" width="52" height="42" rx="15" transform="rotate(-28 44 47)"/>
@@ -95,12 +101,12 @@
                 <circle cx="42" cy="126" r="7" fill="#111"/>
                 <circle cx="110" cy="97" r="7" fill="#111"/>
             </svg>
-        </div>
 
-        <a href="https://www.youtube.com/watch?v=MsSzr_tBIDM" target="_blank" rel="noopener" class="btn-live">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2c-.3-1.1-1.1-1.9-2.2-2.2C19.4 3.5 12 3.5 12 3.5s-7.4 0-9.3.5c-1.1.3-1.9 1.1-2.2 2.2C0 8.1 0 12 0 12s0 3.9.5 5.8c.3 1.1 1.1 1.9 2.2 2.2 1.9.5 9.3.5 9.3.5s7.4 0 9.3-.5c1.1-.3 1.9-1.1 2.2-2.2.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zM9.5 15.5V8.5l6.5 3.5-6.5 3.5z"/></svg>
-            Ver en YouTube
-        </a>
+            <a href="https://www.youtube.com/watch?v=MsSzr_tBIDM" target="_blank" rel="noopener" class="btn-live">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2c-.3-1.1-1.1-1.9-2.2-2.2C19.4 3.5 12 3.5 12 3.5s-7.4 0-9.3.5c-1.1.3-1.9 1.1-2.2 2.2C0 8.1 0 12 0 12s0 3.9.5 5.8c.3 1.1 1.1 1.9 2.2 2.2 1.9.5 9.3.5 9.3.5s7.4 0 9.3-.5c1.1-.3 1.9-1.1 2.2-2.2.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zM9.5 15.5V8.5l6.5 3.5-6.5 3.5z"/></svg>
+                Ver en YouTube
+            </a>
+        </div>
     </div>
 </section>
 
