@@ -70,7 +70,7 @@ nav {
     align-items: center;
     text-align: center;
     padding: 40px 40px 80px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/hero.png');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/hero.webp');
     margin-top: -100px; /* el nav queda sobre el negro */
     padding-top: 110px;
     background-size: cover;       /* Ajusta la imagen para llenar todo el espacio sin deformarse */
